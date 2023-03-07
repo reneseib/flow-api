@@ -9,12 +9,12 @@ import datetime as dt
 app = FastAPI()
 
 origins = [
-    "https://flow-ashy.vercel.app/",
+    "https://flow-ashy.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
