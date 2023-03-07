@@ -10,11 +10,12 @@ app = FastAPI()
 
 origins = [
     "https://flow-ashy.vercel.app",
+    "fastapi-production-eaf0.up.railway.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
