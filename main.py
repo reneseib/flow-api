@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import time
 import requests
 import json
@@ -7,17 +8,17 @@ import datetime as dt
 
 app = FastAPI()
 
-# origins = [
-#     "https://flow-ashy.vercel.app",
-# ]
+origins = [
+    "https://flow-ashy.vercel.app",
+]
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 def chngdt(string):
