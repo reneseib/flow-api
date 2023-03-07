@@ -9,7 +9,7 @@ import datetime as dt
 app = FastAPI()
 
 origins = [
-    "https://flow-ashy.vercel.app",
+    "https://flow-ashy.vercel.app/",
 ]
 
 app.add_middleware(
